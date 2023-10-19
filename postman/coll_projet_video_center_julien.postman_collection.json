@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "d9d9b569-c531-4440-8037-a11f86128620",
+		"name": "coll_projet_video_center_julien",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29528288"
+	},
+	"item": [
+		{
+			"name": "Create User 5 admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idAdmin\",pm.response.json().id);\r",
+							"pm.environment.set(\"admin\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Creation admin\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@cfitech.be\",\r\n  \"roles\": [\r\n    \"ROLE_ADMIN\"\r\n  ],\r\n  \"password\": \"$2y$13$mq5yDl2X3.5UtSA8SoKZdu2NansesIbUdHoTWso5.bfpRKl8Tju5O\",\r\n  \"firstname\": \"admin\",\r\n  \"lastname\": \"admin\",\r\n  \"isVerified\": true\r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"id\",pm.response.json().id);\r",
+							"pm.environment.set(\"username\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user1@cfitech.be\",\r\n  \"password\": \"$2y$13$htjZN.GWbyOUrct0dGLFjOsyw8iaRu9NFe8iEirX6saEXUGJMwqjC\",\r\n  \"firstname\": \"user1\",\r\n  \"lastname\": \"user1\",\r\n  \"isVerified\": true\r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Video 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"id\",pm.response.json().id);\r",
+							"pm.environment.set(\"video\",pm.response.json().videoIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"video1\"\r\n  \"video\": \"video1\",\r\n  \"isVerified\": true\r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Video 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"id\",pm.response.json().id);\r",
+							"pm.environment.set(\"video\",pm.response.json().videoIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"video2\"\r\n  \"video\": \"video2\",\r\n  \"isVerified\": true\r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Video 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"id\",pm.response.json().id);\r",
+							"pm.environment.set(\"video\",pm.response.json().videoIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"video2\"\r\n  \"video\": \"video2\",\r\n  \"isVerified\": true\r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"id\",pm.response.json().id);\r",
+							"pm.environment.set(\"username\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user2@cfitech.be\",\r\n  \"password\": \"$2y$13$FpWcWD/HFShsUWtjCCdjAejF5LMLIgIkOJi3NF1GumNuHvw5BMT6.\",\r\n  \"firstname\": \"user2\",\r\n  \"lastname\": \"user2\",\r\n  \"isVerified\": true\r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"id\",pm.response.json().id);\r",
+							"pm.environment.set(\"username\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user3@cfitech.be\",\r\n  \"password\": \"$2y$13$D0henScPzVsBJa.Wa47nAO2oSJkzMHpJpEa8LC9.NbG1Ad/hLj/Y2\",\r\n  \"firstname\": \"user3\",\r\n  \"lastname\": \"user3\",\r\n  \"isVerified\": true\r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User 4",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"id\",pm.response.json().id);\r",
+							"pm.environment.set(\"username\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user4@cfitech.be\",\r\n  \"password\": \"$2y$13$.aFciT0SdkNqKCJYqKUOfek8AVxYplzml5GrxQQ3oGsqHkKSrxGYq\",\r\n  \"firstname\": \"user4\",\r\n  \"lastname\": \"user4\",\r\n  \"isVerified\": true\r\n}"
+				},
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Try list of users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Try list of users\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{adminToken}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "list of videos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"list of videos\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{adminToken}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "try delete user 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"id\",null);\r",
+							"pm.environment.set(\"username\",null);\r",
+							"pm.environment.set(\"tokens\",null);\r",
+							"\r",
+							"pm.test(\"delete user 4\",function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{adminToken}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{url}}api/users/{{id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"id\",null);\r",
+							"pm.environment.set(\"username\",null);\r",
+							"pm.environment.set(\"tokens\",null);\r",
+							"\r",
+							"pm.test(\"delete user 2\",function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{adminToken}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{url}}api/users/{{id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "login with user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"tokenUser1\",pm.response.json().token);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"user1@cfitech.be\",\r\n  \"password\": \"user1\"\r\n}"
+				},
+				"url": "{{url}}api/login_check"
+			},
+			"response": []
+		}
+	]
+}
